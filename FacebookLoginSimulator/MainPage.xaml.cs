@@ -40,7 +40,7 @@ namespace FacebookLoginSimulator
             // Enter your access token for development purposes below.
             // You can grab one from the graph api explorer: https://developers.facebook.com/tools/explorer
 
-            this.AccessTokenBox.Text = "CAACEdEose0cBAAaDp3hJMVn5kQmuGcFmTgRgfmByZBVsKtReK7Blso8EQBd30BZAaG1T73GOOoZBZAc2zwdnkoMDlZBAkovB8FwwIdZAlXki9JAAMjtyj6dNrUmqneroHercRr2KFJbdWowMjighg7LZC19qKybaUdFUCgl2mqAOdy1uinlbpiqBQ7okc0KUEYZD";
+            this.AccessTokenBox.Text = "CAACEdEose0cBAPTelqknXDBYsZBY0xXpu4VZBoQZCEEC4b8EQFOa0QJ3ZBbpgodK5sxQ6hJYckZCmWvBgYJeBvnN1TGZBOBDw7AAFnmdfJLhLpJG6q1p6ZAvuq9NpK4N8wQUgi0k7CGQEZCk0AZCG9VxdXZClvFrArv9x8QPPaOyR1TQqBc3T4xffOIuP5LZAjE8mwZD";
         }
 
         /// <summary>

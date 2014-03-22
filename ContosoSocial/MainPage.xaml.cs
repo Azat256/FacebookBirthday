@@ -27,6 +27,7 @@ namespace ContosoSocial
         ///     The facebook app id (this is the ID given by facebook in the developer portal for your app)
         /// </summary>
         private const string AppId = "675854675761202";
+        //                            100000712210517
 
         #endregion
 
@@ -167,7 +168,7 @@ namespace ContosoSocial
             SessionStorage.Remove();
 
             FacebookSessionClient fb = new FacebookSessionClient(AppId);
-            fb.LoginWithApp("basic_info,publish_actions,read_stream", "custom_state_string");
+            fb.LoginWithApp("user_birthday,publish_actions,read_stream", "custom_state_string");
         }
 
         /// <summary>
@@ -212,6 +213,12 @@ namespace ContosoSocial
                     dynamic result = await fb.GetTaskAsync("me");
                     var user = new GraphUser(result);
                     user.ProfilePictureUrl = new Uri(string.Format("https://graph.facebook.com/{0}/picture?access_token={1}", user.Id, session.AccessToken));
+                    var b = user.Birthday;
+
+                    dynamic res = await fb.GetTaskAsync("1827135621");
+                    var user1 = new GraphUser(res);
+                    var birtday = user1.Birthday;
+
 
                     this.CurrentUser = user;
 
@@ -236,7 +243,7 @@ namespace ContosoSocial
         /// </returns>
         private async Task GetUserStatus(FacebookClient fb)
         {
-            var statusResult = await fb.GetTaskAsync("me/friends?fields=name,birthday");
+            var statusResult = await fb.GetTaskAsync("me/friends/?fields=birthday");
 
            // this.StatusText.Text = statusResult.data[0].birthday;
         }
